@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="provaSemestrePassado">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/abstractfactory/provaPAssado/provaSemestrePassado.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

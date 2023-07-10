@@ -1,0 +1,113 @@
+package components;// components.Deck.java
+// This file implements a components.Deck of Solitaire cards
+
+
+import factory.AdilsonSymbols.AdilsonSymbolFactory;
+import factory.SymbolFactory;
+import factory.defaultAulaSymbols.DefaultSymbolFactory;
+import location.Location;
+import location.OneLoc;
+import location.ThreeLoc;
+import location.TwoLoc;
+import shading.Filled;
+import shading.Outlined;
+import shading.Shading;
+import shading.Striped;
+import factory.defaultAulaSymbols.Diamond;
+import factory.defaultAulaSymbols.Oval;
+import factory.defaultAulaSymbols.Squiggle;
+import factory.Symbol;
+
+import java.awt.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.util.*;
+import java.io.FileInputStream;
+
+
+
+// The components.Deck class contains each of the 81 unique Solitaire cards
+public class Deck {
+    private static final int NUMCARDS = 81;   // There are 81 cards in the card deck
+    private Card deck [];                     // The array of cards
+    private int top;                          // the top card in the remaining deck
+    private SymbolFactory symbolFactory;
+
+    // the constructor initalizes the array and then each
+    // card in the array
+    public Deck () throws Exception {
+        deck = new Card[NUMCARDS];
+        top = 0;
+
+        Properties props = new Properties();
+        props.load(new InputStreamReader(new FileInputStream(new File("conf.properties"))));
+        String factory = props.getProperty("factory");
+        if (factory.equals("adilson")){
+            this.symbolFactory = new AdilsonSymbolFactory();
+        }else{
+            this.symbolFactory = new DefaultSymbolFactory();
+        }
+        // ta errado tem que pegar figura por figura;
+        Symbol symbols[] = symbolFactory.getSymbols();
+
+
+        // We maintain arrays of the properties of each card
+        // By reusing the same properties, we allow == and != to work
+        Color colours[] = {Color.red, new Color(0, 150, 0), new Color(150, 0, 255)};
+        Shading shadings[] = {Filled.getInstance(), Outlined.getInstance(), Striped.getInstance()};
+        Location locations[] = {OneLoc.getInstance(), TwoLoc.getInstance(), ThreeLoc.getInstance()};
+
+        for (int i=0; i<NUMCARDS; i++) {
+            deck[i] = new Card(colours[(i/27)], shadings[(i/9)%3], locations[i%3], symbols[(i/3)%3]);
+        }
+    }
+
+    // Shuffles a deck and resets the top card to 0.
+    // Note that shuffling is like constructing, in that it brings
+    // all the cards back into the deck.
+    public void shuffle() {
+        Random r = new Random();
+        for (int i=0; i<NUMCARDS; i++) {
+            Card temp = deck[i];
+            int rnum = r.nextInt(NUMCARDS);
+            deck[i] = deck[rnum];
+            deck[rnum] = temp;
+        }
+        top=0;
+    }
+
+    // Deals the top card off the deck
+    public Card dealOneCard () {
+        if (top < NUMCARDS)
+            return deck[top++];
+        else 
+            System.err.println ("Empty deck!!");
+        return null;
+    }
+   
+    // Tests whether there are more cards in the deck
+    public boolean isEmpty(){
+        return top == NUMCARDS;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

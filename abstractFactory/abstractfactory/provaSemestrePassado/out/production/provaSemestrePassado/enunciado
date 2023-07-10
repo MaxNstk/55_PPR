@@ -1,0 +1,33 @@
+“As escolhas mais difíceis requerem as vontades mais fortes” (Thanos)
+Turma: Engenharia de Software (5ª Fase)
+Disciplina: Padrões de Projeto
+Professor: Adilson Vahldick
+PROVA 1-Implementação
+Nome do aluno: Data:
+Abstract Factory
+Baixe o código fonte da prova no Moodle (Aula07). O arquivo contém um único pacote com o
+código fonte que você deve copiar para a pasta src do seu projeto. Antes de começar a
+resolver, execute a aplicação e teste se todos os componentes estão funcionando
+corretamente. A classe Solitaire é que inicia o jogo.
+O projeto se refere ao jogo SET, de um código-fonte copiado de um site
+(https://csserver.ucd.ie/~meloc/DesignPatternJavaExercises/Solitaire/Solitaire.htm) e adaptado
+para atender essa prova. As regras do jogo também estão no Moodle (Aula07).
+O seu objetivo nessa prova é aplicar o padrão Abstract Factory para permitir dois conjuntos
+diferentes de desenhos: o primeiro é o Default da Prova, usando Diamond, Oval e Squiggle
+(veja a classe Card); o segundo é conjunto especial da prova, que envolve o desenho de
+estrelas, retângulos e triângulos. Os métodos para desenhar cada tipo desses novos estão na
+classe DesenhosProva. Escolher entre uma opção e outra é determinada pela leitura de um
+arquivo texto na raiz. O usuário colocará sua opção (Default ou Prova) nesse arquivo texto. O
+jogo, quando for iniciado, deve ler esse arquivo texto e decidir qual factory concreta ele usará.
+No constructor de Deck são definidos os símbolos (symbols[]) da carta.
+Você está livre para adicionar código nas classes existentes e criar novas classes. A princípio
+não precisa mexer na classe Solitaire e nem Set.
+Será avaliada a corretude e completude da aplicação do padrão no cumprimento do padrão
+conforme Gamma et al (2000).
+Entrega:
+Compacte somente a pasta do código fonte (normalmente chamada src) com ZIP. O nome do
+arquivo ZIP é seu nome completo, por exemplo AdilsonVahldick. Envie o arquivo zipado num
+campo específico dessa questão.
+A entrega é até 22:20hs. Cada minuto incompleto adicional desconta 1,0 ponto dessa nota.
+Atenção: a nota será ZERO se o projeto não compilar. Também será ZERO se identificado
+qualquer vestígio de cópia de código fonte com seus colegas.

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="singleton">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/singleton.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

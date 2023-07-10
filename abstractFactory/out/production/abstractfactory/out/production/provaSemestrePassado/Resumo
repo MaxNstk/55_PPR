@@ -1,0 +1,5 @@
+Há dois conjuntos de símbolos:
+    1. Os da prova, DefaultProva (Diamond, Oval e Squiggle)
+    2. Os do Adilson, EspecialProva (Estrela Retangulo e Triangulo)
+
+Necessitamos de uma factory que retornará os símbolos símbolos:

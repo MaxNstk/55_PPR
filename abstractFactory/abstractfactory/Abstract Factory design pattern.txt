@@ -1,0 +1,17 @@
+Abstract Factory design pattern:
+
+Existem duas camadas de Herança: Uma Fábrica E um Produto
+
+A Fábrica é uma classe abstrata que possui metodos abstratos que devolvem Produtos
+Temos múltiplas implementações de Fábricas que herdam de Fábrica
+Essas Fábricas Irão Retornar Protudos do tipo específico daquela Fábrica
+Os produtos implementam os métodos cada um de sua maneira
+
+Temos uma classe Asbtrata FabricaCarros e uma classe Abstrata Carro
+Temos dois herdeiros de Carro -> Palio e Corolla
+Temos duas Fábricas -> FabricaFiat, FábricaToyota
+As FábricaFiat retornara Carro do tipo Fiat
+A FábricaToyota retornara Carro do tipo Corolla
+
+Para justificar a criação de múltiplos produtos é necessário ter implementações diferentes nos métodos.
+Ex. A toyotta tem um getCustoProducao() que precisa de mais etapas do que um getCustoProducao() do Fiat

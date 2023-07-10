@@ -1,0 +1,9 @@
+Considere a existência de uma classe Pizza com os métodos acessores para os seus dois atributos
+cobertura e molho e toString().
+Aplicando o padrão Builder, permita criar Pizzas do tipo Hawaii com cobertura de
+“Presunto+Abacaxi” e molho “Suave” e Pizzas do tipo Picante com cobertura de
+“Pepperoni+Salame” e molho “Apimentado”.
+Desenvolva também uma classe de sistema demonstrando o uso do padrão Builder criando um objeto pizza de cada um dos
+ dois tipos de sabores.
+
+

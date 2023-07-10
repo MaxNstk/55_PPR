@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="abstractfactory">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/abstractfactory.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

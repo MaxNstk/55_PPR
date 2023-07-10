@@ -1,0 +1,30 @@
+DEFINIR um CONTROLADOR DA TELA - listar contas banco
+instancia ele no construtor da tela
+removermos os parametros do contrutor do controlador
+adicionar todos os componentes visuais que estão no controlador no contrutor da tela (dblistener)
+    addItemListener
+
+eliminar abrir tela no controller
+eliminar iniciar componentes no controller
+
+(não peça nada da tela para o controlador diretamente da tela- Apenas avise o controlador e ele avisa os observers para ganhar a açãp)
+
+no contrutor da tela chame o metodo de atualizar info
+crie o metodo acima, ele precisa atualizar o cb e a data table
+
+esse metodo vai informar os observers que precisam ser atualizados
+
+Criar um observer - observerlistabancos
+no controller criar as listar de observers
+
+
+*******
+A tela implementa um observer
+A tela tem o controlador
+O controlador tem a lista de observers
+o controlador recebe a tela como um dos seus observers, (anexar)
+A tela tem todos os componentes visuais e suas ações.
+As ações chamam o controlador e o controlador atualizara todos os observers
+
+
+-- trocar banco - pega o banco selecionado e envia pro controlador, ele troca o banco em todos os que estão observando ele
